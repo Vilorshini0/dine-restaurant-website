@@ -9,8 +9,9 @@
 .hero {
   background-image: url(../assets/images/homepage/hero-bg-mobile.jpg);
   width: 100%;
-  height: 62rem;
+  height: auto;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero .intro {
   display: flex;
@@ -20,4 +21,8 @@
   text-align: center;
   color: #ffffff;
   padding-top: 13rem;
+}
+.hero .intro h1 {
+  font-size: 3rem;
+  margin-bottom: 2.1rem;
 }/*# sourceMappingURL=style.css.map */
