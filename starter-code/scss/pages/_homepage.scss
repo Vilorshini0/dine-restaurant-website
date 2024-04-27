@@ -1,9 +1,11 @@
 .hero {
     background-image: url(../assets/images/homepage/hero-bg-mobile.jpg);
     width: 100%;
+    aspect-ratio: 375 / 748;
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 14.2rem;
 
     .intro {
         display: flex;
@@ -12,11 +14,220 @@
         justify-content: center;
         text-align: center;
         color: $text-color-primary;
-        padding-top: 13rem;
+        background-color: $background-primary;
+        padding-top: 0.6rem;
+        row-gap: 1.5rem;
 
         h1 {
             font-size: 3rem;
-            margin-bottom: 2.1rem;
+            font-weight: 500;
+            letter-spacing: 0.0625rem;
+        }
+
+        p {
+            width: 85%;
+        }
+
+        button {
+            border: 1px solid $text-color-primary;
+            width: 15.31rem;
+            height: 4rem;
+            color: $text-color-primary;
+            background-color: $background-primary;
+            margin-top: 1.8rem;
+            font-size: 1.06rem;
+            letter-spacing: 0.16rem;
+            font-weight: 600;
         }
     }
 }
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+        font-weight: 700;
+        margin: 2.3rem 0 .8rem;
+    }
+    
+    p {
+        width: 88%;
+    }
+
+    img:first-of-type {
+        margin-bottom: 3rem;
+        box-shadow: 0 25px 54px rgba(0, 0, 0, 0.4);
+    }
+
+}
+
+.bloc_1 {
+    transform: translate(0px, -62px);
+}
+
+.bloc_2 {
+    margin: 2.45rem 0 6.25rem;
+}
+
+.highlights {
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $text-color-primary;
+        background-color: $background-primary;
+        padding-top: 0.6rem;
+
+        .divider {
+            padding: 3.94rem 0 .65rem;
+        }
+
+        h2 {
+            font-weight: 700;
+            margin: 1.65rem 0 .8rem;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 20px;
+            padding-bottom: .75rem;
+        }
+
+        p {
+            width: 88%;
+            padding-bottom: 5.2rem;
+        }
+
+        img {
+            padding-bottom: 2.4rem;
+        }
+    }
+
+    .filet,
+    .mousse {
+        img {
+            padding-top: 1.55rem;
+            border-top: 1px solid $border;
+        }
+
+        p {
+            width:68.5%;
+        }
+    }
+
+    .salmon {
+        p:last-child {
+            padding-bottom: 2.7rem;
+        }
+    }
+
+    .filet {
+        p {
+            padding-bottom: 1.15rem;
+        }
+    }
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+
+    h2 {
+        font-weight: 700;
+        margin-bottom: .8rem;
+        margin-top: 2.3rem;
+        margin: .5rem 0 .8rem;
+    }
+
+    h4 {
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.7rem;
+        letter-spacing: .14rem;
+
+        &:first-of-type {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 3rem;
+                height: 1px;
+                background-color: #9E7F66;
+                left: 70px;
+                bottom: -6px;
+            }
+        }
+    }
+    
+    p {
+        width: 90%;
+    }
+
+    img {
+        margin-bottom: 3.5em;
+        box-shadow: 0 25px 54px rgba(0, 0, 0, 0.4);
+    }
+
+    button {
+        width: 15.31rem;
+        height: 4rem;
+        color: $text-color-primary;
+        background-color: $background-primary;
+        margin-top: 1.5rem;
+        font-size: 1.06rem;
+        letter-spacing: 0.16rem;
+        font-weight: 600;
+    }
+}
+
+
+.book {
+    background-image: url(../assets/images/homepage/ready-bg-mobile.jpg);
+    width: 100%;
+    aspect-ratio: 375 / 328;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $text-color-primary;
+    background-color: $background-primary;
+    margin-top: 7.5rem;
+
+    h2 {
+        font-weight: 700;
+    }
+
+    p {
+        width: 85%;
+    }
+
+    button {
+        border: 1px solid $text-color-primary;
+        width: 15.31rem;
+        height: 4rem;
+        color: $text-color-primary;
+        background-color: transparent;
+        margin-top: 1.3rem;
+        font-size: 1.06rem;
+        letter-spacing: 0.16rem;
+        font-weight: 600;
+    }
+}
+

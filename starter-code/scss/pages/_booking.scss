@@ -1,0 +1,146 @@
+.booking {
+    background-image: url(../assets/images/booking/hero-bg-mobile.jpg);
+    width: 100%;
+    aspect-ratio: 5 / 8;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: $text-color-primary;
+    background-color: $background-primary;
+    padding-top: 3.2rem;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        letter-spacing: 0.0625rem;
+        padding-bottom: 2.1rem;
+    }
+
+    p {
+        width: 90%;
+        padding: .78rem 0;
+    }
+
+    button {
+        border: 1px solid $text-color-primary;
+        width: 15.31rem;
+        height: 4rem;
+        color: $text-color-primary;
+        background-color: transparent;
+        margin-top: .2rem;
+        font-size: 1.06rem;
+        letter-spacing: 0.16rem;
+        font-weight: 600;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translate(0px, -62px);
+
+    form {
+        width: 81%;
+        margin: 0 auto;
+        padding: 0.9rem 1.7rem;
+        text-align: left;
+        background-color: $background-tertiary;
+        transform: translate(0px, -62px);
+        box-shadow: 0 25px 54px rgba(0, 0, 0, 0.4);
+    
+        div.elem-group {
+            margin: 20px 0;
+    
+            label {
+                display: block;
+                padding-bottom: 10px;
+                font-size: 1.25em;
+            }
+    
+            input {
+                border: 0;
+                border-bottom: 1px solid $background-primary;
+                box-sizing: border-box;
+                font-size: 20px;
+                color: $background-primary;
+                font-family: $primary-font;
+                background-color: white;
+                width: 100%;
+                padding: 10px;
+
+                &:not(:placeholder-shown) {
+                    background-color: white;
+                }
+            }
+
+            .date {
+                display: flex;
+                column-gap: 1rem;
+            }
+
+            .time {
+                display: flex;
+                column-gap: 1rem;
+                select {
+                    padding: 8px 16px;
+                    font-family: $primary-font;
+                    font-size: 20px;
+                    border: none;
+                    border-bottom: 1px solid $background-primary;
+                    cursor: pointer;
+                }
+            }
+
+            &.person {
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-bottom: 1px solid $background-primary;
+
+                input {
+                    text-align: center;
+                    width: 100%;
+                    border-bottom: none;
+                    padding: 0;
+
+                    :not(:placeholder-shown) {
+                        background-color: white;
+                    }
+                }
+
+                /* Style the buttons */
+                button {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer; /* Set cursor to pointer */
+                    background-color: $background-tertiary;
+                    color: $text-color-secondary;
+                    border: none;
+                    margin: 0;
+                }
+            }
+        }
+        
+        button {
+            width: 15.31rem;
+            height: 4rem;
+            color: $text-color-primary;
+            background-color: $background-primary;
+            margin-top: 1.5rem;
+            font-size: 1.06rem;
+            letter-spacing: 0.16rem;
+            font-weight: 600;
+        }
+    }
+}

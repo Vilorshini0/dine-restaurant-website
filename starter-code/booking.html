@@ -7,34 +7,81 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="scss/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
 <body>
+  <section class="booking">
+    <h1>dine</h1>
+    <h2>Reservations</h2>
+    <p>We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>
+    <a href="booking.html"><button>RESERVE PLACE</button></a>
+  </section>
 
-  Reservations
+  <section class="form">
+    <form action="reservation.php" method="post">
+      <div class="elem-group">
+        <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkin-date">Pick a date</label>
+        <div class="date"> 
+          <input type="text" id="date" name="date" placeholder="DD"/>
+          <input type="text" id="month" name="month"placeholder="MM" />
+          <input type="text" id="year" name="year" placeholder="YYYY"/>
+        </div>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkout-date">Pick a time</label>
+        <div class="time">
+          <input type="number" id="hour" min="1" max="12" step="1" value="09">
+          <input type="number" id="minute" min="0" max="59" step="1" value="00">
+          <select id="ampm">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+     
+      <div class="elem-group inlined person">
+        <button onclick="decrement()">-</button>
+        <!-- Input field -->
+        <input type="text" id="inputField" value="0">
+        <!-- Buttons to increment and decrement -->
+        <button onclick="increment()">+</button>
+      </div>
+      <button type="submit">MAKE RESERVATION </button>
+    </form>
+  </section>
 
-  We can’t wait to host you. If you have any special requirements please feel free to 
-  call on the phone number below. We’ll be happy to accommodate you.
+
+  <section class="detail">
+    <h1>dine</h1>
+    <div class="contact">
+        <p class="address">Marthwaite, Sedbergh Cumbria</p>
+        <p class="time">+00 44 123 4567</p>
+    </div>
+    <div class="opening_hours">
+        <p>OPEN TIMES</p>
+        <p class="week">Mon - Fri: 09:00 AM - 10:00 PM</p>
+        <p class="weekend">Sat - Sun: 09:00 AM - 11:30 PM</p>            
+    </div>
+</section>
 
 
 
+<!-- 
   Name
   Email
   Pick a date
   Pick a time
 
-  Make Reservation
+  Make Reservation -->
 
-
-
-  Marthwaite, Sedbergh
-  Cumbria
-  +00 44 123 4567
-
-  Open Times
-  Mon - Fri: 09:00 AM - 10:00 PM
-  Sat - Sun: 09:00 AM - 11:30 PM
-
+  <script src="js/booking.js"></script>
 </body>
 </html>
