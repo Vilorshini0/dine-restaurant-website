@@ -89,6 +89,10 @@
   letter-spacing: 0.16rem;
   font-weight: 600;
 }
+.hero .intro button:hover, .hero .intro button:focus {
+  background-color: #ffffff;
+  color: #111111;
+}
 
 .description {
   display: flex;
@@ -212,6 +216,10 @@
   letter-spacing: 0.16rem;
   font-weight: 600;
 }
+.events button:hover, .events button:focus {
+  background-color: #ffffff;
+  color: #111111;
+}
 
 .book {
   background-image: url(../assets/images/homepage/ready-bg-mobile.jpg);
@@ -246,6 +254,10 @@
   font-size: 1.06rem;
   letter-spacing: 0.16rem;
   font-weight: 600;
+}
+.book button:hover, .book button:focus {
+  background-color: #ffffff;
+  color: #111111;
 }
 
 .booking {
@@ -285,6 +297,10 @@
   font-size: 1.06rem;
   letter-spacing: 0.16rem;
   font-weight: 600;
+}
+.booking button:hover, .booking button:focus {
+  background-color: #ffffff;
+  color: #111111;
 }
 
 .form {
@@ -386,4 +402,8 @@
   font-size: 1.06rem;
   letter-spacing: 0.16rem;
   font-weight: 600;
+}
+.form form button:hover, .form form button:focus {
+  background-color: #ffffff;
+  color: #111111;
 }/*# sourceMappingURL=style.css.map */

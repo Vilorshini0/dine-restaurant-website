@@ -38,6 +38,11 @@
             font-size: 1.06rem;
             letter-spacing: 0.16rem;
             font-weight: 600;
+
+            &:hover,&:focus {
+                background-color: $background-tertiary;
+                color: $background-primary;
+            }
         }
     }
 }
@@ -189,6 +194,11 @@
         font-size: 1.06rem;
         letter-spacing: 0.16rem;
         font-weight: 600;
+
+        &:hover,&:focus {
+            background-color: $background-tertiary;
+            color: $background-primary;
+        }
     }
 }
 
@@ -228,6 +238,11 @@
         font-size: 1.06rem;
         letter-spacing: 0.16rem;
         font-weight: 600;
+
+        &:hover,&:focus {
+            background-color: $background-tertiary;
+            color: $background-primary;
+        }
     }
 }
 
