@@ -309,10 +309,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transform: translate(0px, -62px);
+  transform: translate(0px, -84px);
 }
 .form form {
-  width: 81%;
+  width: 86%;
   margin: 0 auto;
   padding: 0.9rem 1.7rem;
   text-align: left;
@@ -321,11 +321,14 @@
   box-shadow: 0 25px 54px rgba(0, 0, 0, 0.4);
 }
 .form form div.elem-group {
-  margin: 20px 0 25px;
+  margin: 20px 0 31px;
+}
+.form form div.elem-group:last-of-type {
+  margin-top: -1rem;
 }
 .form form div.elem-group label {
   display: block;
-  padding: 10px 0 5px;
+  padding: 10px 0 10px;
   font-size: 1.25em;
 }
 .form form div.elem-group span,
@@ -395,7 +398,7 @@
   margin: 0;
 }
 .form form button {
-  width: 15.31rem;
+  width: 16.5rem;
   height: 4rem;
   color: #ffffff;
   background-color: #111111;
