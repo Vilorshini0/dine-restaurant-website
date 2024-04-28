@@ -321,12 +321,16 @@
   box-shadow: 0 25px 54px rgba(0, 0, 0, 0.4);
 }
 .form form div.elem-group {
-  margin: 20px 0;
+  margin: 20px 0 25px;
 }
 .form form div.elem-group label {
   display: block;
-  padding-bottom: 10px;
+  padding: 10px 0 5px;
   font-size: 1.25em;
+}
+.form form div.elem-group span,
+.form form div.elem-group + #people {
+  color: #ff0000;
 }
 .form form div.elem-group input {
   border: 0;
@@ -335,15 +339,13 @@
   font-size: 20px;
   color: #111111;
   font-family: "League Spartan", sans-serif;
-  background-color: white;
+  background-color: #ffffff;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0 15px;
+  text-indent: 1rem;
 }
-.form form div.elem-group input:not(:-moz-placeholder-shown) {
-  background-color: white;
-}
-.form form div.elem-group input:not(:placeholder-shown) {
-  background-color: white;
+.form form div.elem-group input.incorrect {
+  border: 1px solid #ff0000;
 }
 .form form div.elem-group .date {
   display: flex;
@@ -369,25 +371,24 @@
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid #111111;
-  /* Style the buttons */
+  margin-bottom: 0;
 }
 .form form div.elem-group.person input {
   text-align: center;
-  width: 100%;
+  width: 10rem;
   border-bottom: none;
   padding: 0;
+  text-indent: 0;
 }
-.form form div.elem-group.person input :not(:-moz-placeholder-shown) {
-  background-color: white;
-}
-.form form div.elem-group.person input :not(:placeholder-shown) {
-  background-color: white;
+.form form div.elem-group.person input:focus {
+  outline: none;
+  border-color: transparent;
 }
 .form form div.elem-group.person button {
   align-items: center;
   display: flex;
   justify-content: center;
-  cursor: pointer; /* Set cursor to pointer */
+  cursor: pointer;
   background-color: #ffffff;
   color: #242b37;
   border: none;
@@ -406,4 +407,37 @@
 .form form button:hover, .form form button:focus {
   background-color: #ffffff;
   color: #111111;
+}
+
+#popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+#popupContainer #popupSuccess {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  font-family: "League Spartan", sans-serif;
+  color: green;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+#popupContainer #popupSuccess p {
+  font-weight: 600;
+}
+#popupContainer #closePopup {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

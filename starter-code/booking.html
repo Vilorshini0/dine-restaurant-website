@@ -22,42 +22,46 @@
   <section class="form">
     <form action="reservation.php" method="post">
       <div class="elem-group">
-        <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        <input type="text" id="name" name="visitor_name" placeholder="Name" pattern="[A-Za-z]+" required>
+        <span id="theName" class="error" style="display:none"><p>Name required</p></span>
       </div>
       <div class="elem-group">
-        <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+        <input type="email" id="email" name="visitor_email" placeholder="Email" required>
+        <span id="theEmail" class="error" style="display:none"><p>Email incorrect</p></span>
       </div>
       <div class="elem-group inlined">
         <label for="checkin-date">Pick a date</label>
         <div class="date"> 
-          <input type="text" id="date" name="date" placeholder="DD"/>
           <input type="text" id="month" name="month"placeholder="MM" />
+          <input type="text" id="date" name="date" placeholder="DD"/>
           <input type="text" id="year" name="year" placeholder="YYYY"/>
         </div>
+        <span id="theDate" class="error" style="display:none"><p>Date incorrect</p></span>
       </div>
       <div class="elem-group inlined">
         <label for="checkout-date">Pick a time</label>
         <div class="time">
-          <input type="number" id="hour" min="1" max="12" step="1" value="09">
-          <input type="number" id="minute" min="0" max="59" step="1" value="00">
+          <input type="number" id="hour" min="1" max="12" step="1" placeholder="09">
+          <input type="number" id="minute" min="0" max="59" step="1" placeholder="00">
           <select id="ampm">
               <option value="AM">AM</option>
               <option value="PM">PM</option>
           </select>
         </div>
+        <span id="theTime" class="error" style="display:none"><p>Time incorrect</p></span>
       </div>
      
       <div class="elem-group inlined person">
-        <button onclick="decrement()">-</button>
+        <button type="button" onclick="decrement()">-</button>
         <!-- Input field -->
-        <input type="text" id="inputField" value="0">
+        <input type="text" id="inputField" value="0" readonly>
         <!-- Buttons to increment and decrement -->
-        <button onclick="increment()">+</button>
+        <button type="button" onclick="increment()">+</button>
       </div>
-      <button type="submit">MAKE RESERVATION </button>
+      <span id="people" class="error" style="display:none"><p>Time incorrect</p></span>
+      <a href="booking.html"><button id="submit">MAKE RESERVATION </button></a>
     </form>
   </section>
-
 
   <section class="detail">
     <h1>dine</h1>
@@ -72,15 +76,12 @@
     </div>
 </section>
 
-
-
-<!-- 
-  Name
-  Email
-  Pick a date
-  Pick a time
-
-  Make Reservation -->
+<div id="popupContainer">
+  <div id="popupSuccess">
+      <p>Reservation Successful!</p>
+      <button id="closePopup">Close</button>
+  </div>
+</div>
 
   <script src="js/booking.js"></script>
 </body>
